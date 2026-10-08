@@ -1,0 +1,146 @@
+
+========== Campus Shortest Route Finder ==========
+ 1. Enter Campus Graph
+ 2. Display Adjacency Matrix
+ 3. Select Source Location
+ 4. Find Shortest Distance
+ 5. Display Shortest Paths
+ 6. Display Distance from Source to All Locations
+ 7. Exit
+==================================================
+Enter your choice: 
+Load the sample campus graph? (1 = Yes, 0 = Enter my own): 
+Sample campus graph loaded (5 locations, 6 roads).
+
+========== Campus Shortest Route Finder ==========
+ 1. Enter Campus Graph
+ 2. Display Adjacency Matrix
+ 3. Select Source Location
+ 4. Find Shortest Distance
+ 5. Display Shortest Paths
+ 6. Display Distance from Source to All Locations
+ 7. Exit
+==================================================
+Enter your choice: 
+Adjacency Matrix (INF = 9999 means no direct road)
+
+           1     2     3     4     5
+     1     0     4   INF    10   INF
+     2     4     0     3     5   INF
+     3   INF     3     0   INF     5
+     4    10     5   INF     0     6
+     5   INF   INF     5     6     0
+
+No.  Location
+1    Main Gate
+2    Library
+3    Computer Department
+4    Laboratory
+5    Auditorium
+
+========== Campus Shortest Route Finder ==========
+ 1. Enter Campus Graph
+ 2. Display Adjacency Matrix
+ 3. Select Source Location
+ 4. Find Shortest Distance
+ 5. Display Shortest Paths
+ 6. Display Distance from Source to All Locations
+ 7. Exit
+==================================================
+Enter your choice: 
+No.  Location
+1    Main Gate
+2    Library
+3    Computer Department
+4    Laboratory
+5    Auditorium
+
+Enter source location number (1-5): Source selected: Main Gate
+
+========== Campus Shortest Route Finder ==========
+ 1. Enter Campus Graph
+ 2. Display Adjacency Matrix
+ 3. Select Source Location
+ 4. Find Shortest Distance
+ 5. Display Shortest Paths
+ 6. Display Distance from Source to All Locations
+ 7. Exit
+==================================================
+Enter your choice: 
+--- Dijkstra's Algorithm: source = Main Gate ---
+Initial:
+   dist[] = { 0 INF INF INF INF }
+
+Iteration 1: pick Main Gate (distance 0)
+   Updated Library: distance = 4 (via Main Gate)
+   Updated Laboratory: distance = 10 (via Main Gate)
+   dist[] = { 0 4 INF 10 INF }
+
+Iteration 2: pick Library (distance 4)
+   Updated Computer Department: distance = 7 (via Library)
+   Updated Laboratory: distance = 9 (via Library)
+   dist[] = { 0 4 7 9 INF }
+
+Iteration 3: pick Computer Department (distance 7)
+   Updated Auditorium: distance = 12 (via Computer Department)
+   dist[] = { 0 4 7 9 12 }
+
+Iteration 4: pick Laboratory (distance 9)
+   dist[] = { 0 4 7 9 12 }
+
+Iteration 5: pick Auditorium (distance 12)
+   dist[] = { 0 4 7 9 12 }
+
+Shortest distances computed from Main Gate.
+Time complexity: O(V^2)  (V iterations x O(V) minimum search + O(V) relaxation).
+
+========== Campus Shortest Route Finder ==========
+ 1. Enter Campus Graph
+ 2. Display Adjacency Matrix
+ 3. Select Source Location
+ 4. Find Shortest Distance
+ 5. Display Shortest Paths
+ 6. Display Distance from Source to All Locations
+ 7. Exit
+==================================================
+Enter your choice: 
+Source: Main Gate
+
+Destination            Distance   Shortest Path
+------------------------------------------------------------------
+Library                4          Main Gate -> Library
+Computer Department    7          Main Gate -> Library -> Computer Department
+Laboratory             9          Main Gate -> Library -> Laboratory
+Auditorium             12         Main Gate -> Library -> Computer Department -> Auditorium
+
+========== Campus Shortest Route Finder ==========
+ 1. Enter Campus Graph
+ 2. Display Adjacency Matrix
+ 3. Select Source Location
+ 4. Find Shortest Distance
+ 5. Display Shortest Paths
+ 6. Display Distance from Source to All Locations
+ 7. Exit
+==================================================
+Enter your choice: 
+Source: Main Gate
+
+No.  Location               Distance from Source
+----------------------------------------------
+1    Main Gate              0
+2    Library                4
+3    Computer Department    7
+4    Laboratory             9
+5    Auditorium             12
+
+========== Campus Shortest Route Finder ==========
+ 1. Enter Campus Graph
+ 2. Display Adjacency Matrix
+ 3. Select Source Location
+ 4. Find Shortest Distance
+ 5. Display Shortest Paths
+ 6. Display Distance from Source to All Locations
+ 7. Exit
+==================================================
+Enter your choice: 
+Exiting program. Goodbye!
